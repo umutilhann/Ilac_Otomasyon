@@ -336,9 +336,9 @@ This file contains sensitive configuration variables for database access and the
 ```
 DB_HOST=localhost
 DB_USER=root
-DB_PASSWORD=enes2343
-DB_NAME=eczane
-PORT=3000
+DB_PASSWORD=""
+DB_NAME=""
+PORT=""
 ```
 
 - **DB_HOST**: Hostname for the MySQL server.
