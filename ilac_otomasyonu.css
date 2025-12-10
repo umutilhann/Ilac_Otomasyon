@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box; 
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Gövde elementi için stil ayarları */
+body {
+  width: 100%; /* Tam genişlik */
+  height: 100vh; /* Görünüm yüksekliğinin tamamı */
+  background: linear-gradient(-45deg, oklab(0.3 -0.03 -0.04) 0%, oklab(0.54 -0.08 -0.1) 13%, oklab(0.75 -0.06 -0.13) 25%, oklab(0.85 -0.04 -0.18) 38%, oklab(0.3 -0.03 -0.04) 50%, oklab(0.54 -0.08 -0.1) 62%, oklab(0.75 -0.06 -0.13) 75%, oklab(0.85 -0.04 -0.18) 87%, oklab(0.3 -0.03 -0.04) 100%); /* Degrade arka plan */
+  background-size: 400% 400%; /* Arka plan hareketini yumuşak hale getir */
+  position: relative; /* Gövde içindeki elementler için pozisyon ayarla */
+  animation: arkaPlanaHareketKat 6s infinite; /* Arka plan hareketi animasyonu */
+  flex-direction: column; 
+  gap: 20px; 
+}
+
+/* Arka plan için keyframe animasyonu */
+@keyframes arkaPlanaHareketKat {
+  0% {
+    background-position: 0 50%; /* Başlangıç konumu */
+  }
+  50% {
+    background-position: 100% 50%; /* Orta konum */
+  }
+  100% {
+    background-position: 0 50%; /* Bitiş konumu */
+  }
+}
+
+/* Rapor metni elementi için stil */
+.report-text {
+  position: fixed; 
+  bottom: 70px;
+  right: 20px; 
+  padding: 15px 80px; 
+  animation: bounce 2s infinite; 
+  border-radius: 30px; 
+  background-color: rgb(125, 237, 233);
+}
+
+/* Zıplama efekti için keyframe animasyonu */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Varsayılan konum */
+  }
+  50% {
+    transform: translateY(-10px); /* Yukarı hareket */
+  }
+}
+
+/* Rapor butonu için stil */
+.report-button {
+  border-radius: 30px; 
+  position: fixed; 
+  bottom: 30px;
+  right: 25px;
+  background-color: #ff0000;
+  color: white; 
+  font-size: 14px; 
+  padding: 10px 140px;
+  border: none; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; 
+  animation: bounce 2s infinite ease-in-out; /* Sürekli zıplama animasyonu */
+}
+
+/* Rapor butonu için hover efekti */
+.report-button:hover {
+  background-color: #cc0000; 
+  transform: scale(1.1); 
+}
+
+/* Genel stiller */
+.navbar {
+  height: 120px;
+  width: 100%; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  color: black; 
+  top: 0; 
+  z-index: 1000; 
+  font-size: 35px; 
+  cursor: pointer; 
+}
+
+/* Navbar içindeki sol bölüm için stil */
+.navbar .left {
+  font-style: italic;
+  color: rgb(255, 221, 0);
+}
+
+.navbar .left h1 span span {
+  display: block;
+  animation: animateWords 6s infinite ease;
+}
+
+@keyframes animateWords {
+  0% {transform: translateY(0%);}
+  25% {transform: translateY(-100%);}
+  50% {transform: translateY(-200%);}
+  75% {transform: translateY(-300%);}
+  100% {transform: translateY(-400%);}
+}
+
+.navbar .left h1 span {
+  position: relative;
+  display: inline-block;
+  height: 1.2em;
+  vertical-align: bottom;
+  overflow: hidden;
+}
+
+/* Ana içerik için container */
+.content {
+  display: flex; /* Flex düzeni */
+  flex-direction: column; /* Elementler için sütun düzeni */
+  align-items: center; /* Yatay hizalama */
+  justify-content: center; /* Dikey hizalama */
+  height: 100%; 
+  margin-top: 70px;
+}
+
+/* İçerikteki butonlar için stil */
+.content button {
+  border-radius: 30px;
+  margin-right: 5px;
+  margin-left: -5px;
+  padding: 20px 80px;
+  font-size: 20px; 
+  background-color: #0c00e6; 
+  color: white;
+  border: none;
+  cursor: pointer; 
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out; /* Hover efekti için geçiş */
+}
+
+/* Butonlar için hover efekti */
+.content button:hover {
+  background-color: #072b4f; 
+  transform: scale(1.1);
+  color: red;
+}
+
+/* Navbar içindeki bağlantılar için stil */
+.navbar .right a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: rgb(247, 255, 2); 
+  font-size:30px;
+}
+
+/* Navbar bağlantıları için hover efekti */
+.navbar .right a:hover {
+  color: rgb(255, 56, 11);
+  transition: 300ms; 
+}
+
+/* Giriş alanları için stil */
+.content input {
+  padding: 15px 30px; 
+  background-color: #fff; 
+  color: black; 
+  border-radius: 30px;
+}
+
+/* Harita bölümü için stil */
+.navbar .right .map {
+  padding: 10px 20px; 
+}
+
+.content .enter {
+  margin-top: 190px; 
+  margin-bottom: 25px; 
+}
+
+.content .enter input {
+  padding: 20px 40px;
+  margin-top:60px;
+  background-image: url(img/img4.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+
+
+
+ /* KLENEN BİLDİRİM STİLLERİ */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 18px 25px;
+  border-radius: 12px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transform: translateX(150%);
+  animation: slideIn 0.5s forwards, fadeOut 0.5s forwards 2.5s;
+}
+
+@keyframes slideIn {
+  to { transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; }
+}
+
+.notification.success {
+  background: #4CAF50;
+  color: white;
+  border-left: 5px solid #388E3C;
+}
+
+.notification.error {
+  background: #F44336;
+  color: white;
+  border-left: 5px solid #D32F2F;
+}
+
+.notification.warning {
+  background: #FF9800;
+  color: white;
+  border-left: 5px solid #F57C00;
+}
+
+.notification-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}

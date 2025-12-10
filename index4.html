@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reçetesiz İlaç Otomasyon Sistemi</title>
+  <!-- Stil dosyanızın bağlantısı -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <span>&#128137;</span>
+    <h3 class="rainbow-text">REÇETESİZ GİRİŞ EKRANI</h3>
+    <span>&#x1F691;</span>
+  </nav>
+
+  <form class="medicine-form">
+    <!-- Ağrı Kesici ve Ateş Düşürücüler -->
+    <div class="form-group">
+      <label>Ağrı Kesici ve Ateş Düşürücüler</label>
+      <select>
+        <option value="">Seçiniz &#128270;</option>
+        <option>Paracetamol (Parol)</option>
+        <option>İbuprofen (Advil)</option>
+        <option>Aspirin (Coraspin)</option>
+        <option>Naproksen (Apranax)</option>
+      </select>
+    </div>
+
+    <!-- Alerji İlaçları -->
+    <div class="form-group">
+      <label>Alerji İlaçları</label>
+      <select>
+        <option value="">Seçiniz &#128270;</option>
+        <option>Loratadin (Lorin)</option>
+        <option>Cetirizin (Alerid)</option>
+        <option>Feksofenadin (Allegra)</option>
+        <option>Desloratadin (Aerius)</option>
+      </select>
+    </div>
+
+    <!-- Burun Tıkanıklığı Gidericiler -->
+    <div class="form-group">
+      <label>Burun Tıkanıklığı Gidericiler</label>
+      <select>
+        <option value="">Seçiniz &#128270;</option>
+        <option>Psödoefedrin (Sudofed)</option>
+        <option>Oksimetazolin (Burun Spreyi)</option>
+        <option>Ksilometazolin (Otrivin)</option>
+      </select>
+    </div>
+
+    <!-- Mide Asidi Düzenleyiciler -->
+    <div class="form-group">
+      <label>Mide Asidi Düzenleyiciler</label>
+      <select>
+        <option value="">Seçiniz &#128270;</option>
+        <option>Omeprazol (Omeped)</option>
+        <option>Famotidin (Famocid)</option>
+        <option>Simetikon (Gasvin)</option>
+      </select>
+    </div>
+
+    <!-- Öksürük ve Soğuk Algınlığı İlaçları -->
+    <div class="form-group">
+      <label>Öksürük ve Soğuk Algınlığı İlaçları</label>
+      <select>
+        <option value="">Seçiniz &#128270;</option>
+        <option>Bromheksin (Bisolvon Linctus)</option>
+        <option>Dekstrometorfan (Vicks)</option>
+        <option>Guaifenesin (Bisolvon)</option>
+      </select>
+    </div>
+
+    <!-- Cilt ve Yara Bakımı İlaçları -->
+    <div class="form-group">
+      <label>Cilt ve Yara Bakımı İlaçları</label>
+      <select>
+        <option value="">Seçiniz &#128270;</option>
+        <option>Mupirosin (Bactroban)</option>
+        <option>Fusidik Asit (Fusidin Krem)</option>
+        <option>Polimiksin B (Baneocin)</option>
+        <option>Povidon İyot (Betadine)</option>
+      </select>
+    </div>
+
+    <!-- Kabızlık Gidericiler -->
+    <div class="form-group">
+      <label>Kabızlık Gidericiler</label>
+      <select>
+        <option value="">Seçiniz &#128270;</option>
+        <option>Bisakodil (Dulcolax)</option>
+        <option>Laktuloz</option>
+        <option>Sodyum Pikosülfat (Laxoberal)</option>
+      </select>
+    </div>
+
+    <!-- Butonlar -->
+    <div class="button-container">
+      <button
+        type="button"
+        class="btn-map"
+        onclick="window.open('https://www.google.com/maps/search/bankamatik','_blank')"
+      >
+        &#128204; Harita
+      </button>
+      <button
+        type="button"
+        class="main-menu"
+        onclick="location.href='ilac_otomasyonu.html'"
+      >
+        &#127968; Ana Sayfa
+      </button>
+      <button type="reset" class="btn reset">
+        &#128465; Temizle
+      </button>
+      <button type="submit" class="btn submit">
+        &#9193; Onayla &#9194;
+      </button>
+    </div>
+  </form>
+
+  <script src="app.js"></script>
+</body>
+</html>

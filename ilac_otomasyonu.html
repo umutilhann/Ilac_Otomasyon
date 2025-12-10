@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>İlaç Otomasyon Sistemi</title>
+  <link rel="stylesheet" href="ilac_otomasyonu.css">
+</head>
+<body>
+  <form id="login-form">
+    <div class="navbar">
+      <div class="left">
+        <h1>
+          &#128138;
+        <span>
+          <span>
+            İLAÇ
+          </span>
+          <span>
+            OTOMASYON
+          </span>
+          <span>
+            SİSTEMİ
+          </span>
+        </span>
+        </h1>
+      </div>
+      <div class="right">
+        <a href="ilac_otomasyonu.html">Ana Sayfa</a>
+        <a href="https://www.google.com/maps/search/bankamatik" type="button">Harita</a>
+      </div>
+    </div>
+    <div class="content">
+      <div class="enter">
+        <input id="code-input" type="text" placeholder="Reçeteli Giriş">
+        <input id="tc-input"   type="text" placeholder="Reçetesiz Giriş (TC)">
+      </div>
+      <div class="after-enter">
+        <button id="enter-btn" type="submit">Giriş Yap &#128274;</button>
+        <button id="delete-btn" type="reset">&#129512; Temizle</button>
+      </div>
+    </div>
+    <input class="report-text" id="report-text" type="text" placeholder="Sorun/İstek Yazınız">
+    <button class="report-button" id="report" type="button">Bildir</button>
+  </form>
+  <script src="app.js"></script>
+</body>
+</html>

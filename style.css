@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url(img4.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;   
+}
+
+.rainbow-text {
+    border: 3px solid rgb(47, 255, 0);
+    border-radius: 30px;
+    margin-top: 10px;
+    font-size: 65px;
+    margin-bottom: 15px;
+    animation: rainbowBorder 3s linear infinite, 
+               rainbowText 3s linear infinite,
+               navbarFloat 2s ease-in-out infinite;           
+    padding: 15px;
+    position: relative;
+}
+
+@keyframes navbarFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes rainbowBorder {
+    0% { border-color: #ff0000; }
+    25% { border-color: #00ff00; }
+    50% { border-color: #0000ff; }
+    75% { border-color: #ff00ff; }
+    100% { border-color: #ff0000; }
+}
+
+@keyframes rainbowText {
+    0% { color: #ff0000; }
+    25% { color: #ff0000; }
+    50% { color: #ff0000; }
+    75% { color: #ff0000; }
+    100% { color: #ff0000; }
+}
+
+nav span {
+    font-size: 60px;
+    animation: spin 4s linear infinite;
+    display: inline-block;
+}
+
+form {
+    background: linear-gradient(
+        45deg,
+        rgb(173, 216, 230),
+        rgb(135, 206, 235),
+        rgb(176, 224, 230),
+        rgb(176, 196, 222),
+        rgb(135, 206, 250),
+        rgb(173, 216, 230)); 
+    background-size: 100% 300%;
+    animation: rainbow 5s ease-in-out infinite;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 0% 100%; }
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #34495e;
+}
+
+.form-group select {
+    cursor: pointer;
+    width: 100%;
+    padding: 12.8px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52,152,219,0.3);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.button-container .main-menu {
+    border: none;
+    padding: 13px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: blue;
+    font-size: 20px;
+}
+
+.button-container .main-menu:hover {
+    background-color: rgb(0, 166, 255);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 300ms ease;
+}
+
+.button-container .main-menu span a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    padding: 13px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+.btn.reset {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn.submit {
+    background-color: #27ae60;
+    color: white;
+}
+
+.btn-map {
+    background-color: #0318d1;
+    padding: 13px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-map:hover {
+    transform: scale(1.1);
+    transition: 300ms;
+    opacity: 0.9;
+}
+
+.btn-map a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-map a:hover{
+    color: red;
+}
+
+/* YENİ EKLENEN BİLDİRİM STİLLERİ */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 18px 25px;
+  border-radius: 12px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transform: translateX(150%);
+  animation: slideIn 0.5s forwards, fadeOut 0.5s forwards 2.5s;
+}
+
+@keyframes slideIn {
+  to { transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; }
+}
+
+.notification.success {
+  background: #4CAF50;
+  color: white;
+  border-left: 5px solid #388E3C;
+}
+
+.notification.error {
+  background: #F44336;
+  color: white;
+  border-left: 5px solid #D32F2F;
+}
+
+.notification.warning {
+  background: #FF9800;
+  color: white;
+  border-left: 5px solid #F57C00;
+}
+
+.notification-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
